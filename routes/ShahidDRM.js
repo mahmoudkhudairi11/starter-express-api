@@ -16,7 +16,7 @@ module.exports = (_, res) => {
       drmResponse.on("data", (chunk) => data += chunk.toString());
       drmResponse.on("close", () => {
         try {
-          console.log(drmResponse);
+          console.log(data);
           const drm = JSON.parse(data);
           if (!("signature" in drm)) throw null;
           res.status(307).setHeader("location", drm.signature).end();
