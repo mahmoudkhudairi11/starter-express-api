@@ -12,11 +12,11 @@ module.exports = (_, res) => {
       }
     },
     (drmResponse) => {
-      return res.end("4");
       let data = "";
       drmResponse.on("data", (chunk) => data += chunk.toString());
       drmResponse.on("close", () => {
         try {
+          return res.end("4");
           const drm = JSON.parse(data);
           if (!("signature" in drm)) throw null;
           res.status(307).setHeader("location", drm.signature).end();
