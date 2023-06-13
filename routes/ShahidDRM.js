@@ -8,7 +8,8 @@ module.exports = (_, res) => {
       headers: {
         browser_name: "CHROME",
         browser_version: 113,
-        shahid_os: "WINDOWS"
+        shahid_os: "WINDOWS",
+        token: "eyJhbGciOiJIUzI1NiJ9.eyJjYWNoZSI6IlVzZXJfYzE4MDZhZDRiNzAzNDg0ZWE1MDJlZWM3ODc5Zjk3M2UiLCJ1aWQiOiJhcHIxU2hhaGlkRW5RWUpQTUsyTmxCb25xVnZqejJFV3QiLCJkaWQiOiJXZWIiLCJzdWJpZCI6ImMxODA2YWQ0YjcwMzQ4NGVhNTAyZWVjNzg3OWY5NzNlIiwic3ViIjoic2hhaGlkLXRva2VuLWVuY29kZSIsImlzcyI6InNoYWhpZC10b2tlbi1lbmNvZGUiLCJpYXQiOjE2ODU5MTc4ODksImV4cCI6MTcxNzU0MDI4OX0.4uc_coKEwQPQn8y0T3nOml0sg6PK5cQ2lpq9opK64FE"
       }
     },
     (drmResponse) => {
