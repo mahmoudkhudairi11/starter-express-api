@@ -4,4 +4,4 @@ const app = express();
 
 app.use("/widevine-drm/shahid", ShahidDRM);
 
-app.listen(process.env.PORT);
+app.listen(5000 || process.env.PORT);
