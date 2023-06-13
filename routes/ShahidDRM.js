@@ -18,9 +18,9 @@ module.exports = (_, res) => {
         try {
           const drm = JSON.parse(data);
           if (!("signature" in drm)) throw null;
-          return res.end("OK");
           res.status(307).setHeader("location", drm.signature).end();
         } catch (e) {
+          return res.end("OK");
           res.status(503).end();
         }
       });
