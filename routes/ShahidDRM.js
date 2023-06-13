@@ -12,6 +12,7 @@ module.exports = (_, res) => {
       }
     },
     (drmResponse) => {
+      return res.end("4");
       let data = "";
       drmResponse.on("data", (chunk) => data += chunk.toString());
       drmResponse.on("close", () => {
