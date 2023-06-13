@@ -16,12 +16,12 @@ module.exports = (_, res) => {
       drmResponse.on("data", (chunk) => data += chunk.toString());
       drmResponse.on("close", () => {
         try {
+          console.log(drmResponse);
           const drm = JSON.parse(data);
           if (!("signature" in drm)) throw null;
           res.status(307).setHeader("location", drm.signature).end();
         } catch (e) {
-          return res.end("OK");
-          res.status(503).end();
+          res.status(503).end("Failed to Create License");
         }
       });
     }
