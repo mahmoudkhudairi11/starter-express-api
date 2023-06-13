@@ -3,7 +3,7 @@ const https = require("https");
 module.exports = (_, res) => {
 
   https.get(
-    "https://api2.shahid.net/proxy/v2.1/playout/new/drm?request=%7B%22assetId%22%3A%20982261%7D",
+    "https://api2.shahid.net/proxy/v2.1/playout/new/drm?request=%7B%22assetId%22%3A980214%7D",
     {
       headers: {
         browser_name: "CHROME",
